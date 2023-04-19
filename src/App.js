@@ -1,6 +1,5 @@
 import './App.css';
-import { Button } from './components/button/button';
-import Card from './components/card/card';
+
 
 function App() {
 
@@ -27,9 +26,18 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to react js  ....</h1>
-      <Button/>
-      <Card/>
+      <img id="reactphoto"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png"/>
+      <h1>Beneifits of using react...</h1>
+      
+        <p>1. Components-based architecture</p>
+        <p>2. Virtual DOM for efficient updates</p>
+        <p>3. Rich ecosystem and community</p>
+        <p>4. Cross-platfrom development</p>
+        <p>5. Strong community support</p>
+       <button>Get Started</button>
+
+     
+     
     </div>
   );
 }
