@@ -1,6 +1,8 @@
 import './App.css';
-import { Button } from './components/button/button';
-import Card from './components/card/card';
+import { Button } from './components/Button/button';
+import ReactBenefits from './components/logo/ReactBenefits';
+import ReactLogo from './components/ReactLogo/ReactLogo';
+
 
 function App() {
 
@@ -27,9 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Welcome to react js  ....</h1>
+      <ReactLogo/>
+      <ReactBenefits/>
       <Button/>
-      <Card/>
     </div>
   );
 }

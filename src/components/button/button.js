@@ -1,4 +1,4 @@
-
+import './button'
 
 export function Button () {
 
