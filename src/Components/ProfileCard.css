@@ -1,10 +1,24 @@
 #profilediv{
-    background-color: blue;
+    background-color: rgb(142, 10, 129);
     width: 500px;
     height: 400px;
     
    margin-left: 25%;
+   margin-bottom:20px;
     border-radius: 10px;
+    -webkit-box-shadow: -4px 8px 38px 32px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 8px 38px 32px rgba(0,0,0,0.75);
+box-shadow: -4px 8px 38px 32px rgba(0,0,0,0.75);
+font-family: "Arial Black", Gadget, sans-serif;
+font-size: 14px;
+letter-spacing: -0.2px;
+word-spacing: -0.4px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
 
 }
 #image{
