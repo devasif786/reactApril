@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.maindiv{
+  background-color: rgb(62, 41, 81);
+
+  margin-left: 10%;
+  padding: 5%;
+
+}

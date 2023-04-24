@@ -1,0 +1,44 @@
+#profilediv{
+    background-color: blue;
+    width: 500px;
+    height: 400px;
+    
+   margin-left: 25%;
+    border-radius: 10px;
+
+}
+#image{
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+    border:5px solid white;
+    margin-top: 20px;
+    margin-left: 9%;
+}
+
+#desig{
+    margin-left: 9%;
+    margin-top: 10px;
+    text-decoration: solid;
+    text-shadow: 5px;
+    color: antiquewhite;
+}
+#nam{
+    font-size:xx-large;
+    color: antiquewhite;
+    margin-left: 9%;
+    margin-top: 20px;
+}
+#job{
+    color: antiquewhite;
+    margin-left: 9%;
+    margin-top: 15px;
+}
+#btn{
+    cursor: pointer;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 5px;
+    padding: 2%;
+    margin-left: 40%;
+}
