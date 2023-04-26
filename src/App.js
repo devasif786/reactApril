@@ -15,8 +15,8 @@ function App() {
 const  productDetails2= {
   productId : "2",
     productPic : "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
-    productName : "Salman khan",
-    brand : "bhai",
+    productName : "Tshirt",
+    brand : "Adidas",
     productDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     price : "21k",
     rating : 4, 
@@ -24,8 +24,8 @@ const  productDetails2= {
 const productDetails3 = {
   productId : "3",
   productPic : "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
-  productName : "Salman khan2",
-  brand : "bhai",
+  productName : "Tshirt",
+  brand : "adidas",
   productDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   price : "21k",
   rating : 4, 
@@ -33,8 +33,8 @@ const productDetails3 = {
 const productDetails4 = {
   productId : "4",
   productPic : "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
-  productName : "Salman khan3",
-  brand : "bhai",
+  productName : "Tshirt",
+  brand : "adidas",
   productDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   price : "21k",
   rating : 4, 
@@ -42,8 +42,8 @@ const productDetails4 = {
 const productDetails5 = {
   productId : "5",
   productPic : "https://cdn.pixabay.com/photo/2016/12/06/09/31/blank-1886008__340.png",
-  productName : "Salman khan4",
-  brand : "bhai",
+  productName : "Tshirt",
+  brand : "Adidas",
   productDescription : "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   price : "21k",
   rating : 4, 
@@ -55,11 +55,14 @@ const productDetails5 = {
 
   return (
     <div className="App">
+     
    <Product pd={productDetails1}/>
    <Product pd={productDetails2}/>
    <Product pd={productDetails3}/>
+   
    <Product pd={productDetails4}/>
    <Product pd={productDetails5}/>
+   
     </div>
 
   );

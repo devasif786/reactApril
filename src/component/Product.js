@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Product.css'
 export default function Product({pd}) 
 {
  const{ productId,productPic,productName ,brand , productDescription , price , rating}=pd
@@ -9,15 +9,18 @@ export default function Product({pd})
     
   return (
     <div>
-    <img src={productPic} alt={productName} />
+    <div id="pdiv">
+    <img id="img"src={productPic} alt={productName} />
       <div>
-        <h2>{productName}</h2>
-        <h3>{brand}</h3>
-        <p>{productDescription}</p>
-        <p>Price: {price}</p>
-        <p>Rating: {rating}/5</p>
-        <button onClick={handleAddToCart}>Add to Cart</button>
+        <h2 id="pnam">{productName}</h2>
+        <h3 id="brand">{brand}</h3>
+        <p id="des">{productDescription}</p>
+        <p id="price">Price: {price}</p>
+        <p id ="rating">Rating: {rating}/5</p>
+        <div id ="btn1"><button id="btn"onClick={handleAddToCart}>Add to Cart</button></div>
+        
       </div>
+    </div>
     </div>
   )
 }
