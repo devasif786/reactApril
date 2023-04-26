@@ -1,5 +1,6 @@
 #pdiv{
     width: 400px;
+    
 margin-top: 20px;
     margin-left: 20px;
  
@@ -9,8 +10,8 @@ box-shadow: 10px 10px 56px 0px rgba(0,0,0,1);
 }
 #img{
     background-color: aqua;
-    height: 100px;
-    width:100px;
+    height: 200px;
+    width:200px;
     -webkit-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
     -moz-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
     box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
@@ -19,17 +20,30 @@ box-shadow: 10px 10px 56px 0px rgba(0,0,0,1);
 #pnam{
     
     color: blue;
+    -webkit-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    -moz-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+
 }
 #brand{
 color: blueviolet;
+-webkit-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    -moz-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+
 }
 #des{
     font-size: larger;
 color: chartreuse;
 }
 #price{
+    text-decoration: solid;
+    font-weight: 700;
     font-size: larger;
 color:rgb(230, 15, 15);
+-webkit-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    -moz-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+    box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
 
 }
 #rating{

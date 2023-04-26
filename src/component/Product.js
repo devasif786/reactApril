@@ -12,10 +12,10 @@ export default function Product({pd})
     <div id="pdiv">
     <img id="img"src={productPic} alt={productName} />
       <div>
-        <h2 id="pnam">{productName}</h2>
-        <h3 id="brand">{brand}</h3>
+        <h2><span id="pnam">{productName}</span></h2>
+        <h3><span id="brand"> {brand}</span></h3>
         <p id="des">{productDescription}</p>
-        <p id="price">Price: {price}</p>
+        <p><span id="price">Price: {price}</span></p>
         <p id ="rating">Rating: {rating}/5</p>
         <div id ="btn1"><button id="btn"onClick={handleAddToCart}>Add to Cart</button></div>
         
