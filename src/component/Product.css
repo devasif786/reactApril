@@ -41,9 +41,9 @@ color: chartreuse;
     font-weight: 700;
     font-size: larger;
 color:rgb(230, 15, 15);
--webkit-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
-    -moz-box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
-    box-shadow: 10px 10px 56px 13px rgba(191,180,191,1);
+-webkit-box-shadow: 10px 10px 0px -7px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 0px -7px rgba(0,0,0,1);
+box-shadow: 10px 10px 0px -7px rgba(0,0,0,1);
 
 }
 #rating{
