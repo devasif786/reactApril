@@ -14,7 +14,7 @@ export default function
    }
    return (
      <div>
-     <input type="text" placeholder="Enter your name" value={name} onChange={onc}/>
+     <input type="text" placeholder="Enter your name" value={name} style={{margin:"40px"}}onChange={onc}/>
      <button onClick={onC}>Submit</button>
      <div>{name1}</div>
  
