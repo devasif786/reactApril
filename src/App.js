@@ -48,19 +48,22 @@ const productDetails5 = {
   price : "10k",
   rating : 4, 
 }
+const arrpd=[productDetails1,productDetails2,productDetails3,productDetails4,productDetails5]
 
 
 
- 
 
   return (
     <div className="App">
+      {arrpd.map((ele) => (
+        <Product key={ele.productId} pd={ele} />
+      ))}
      
-   <Product pd={productDetails1}/>
+   {/* <Product pd={productDetails1}/>
    <Product pd={productDetails2}/>
    <Product pd={productDetails3}/>
    <Product pd={productDetails4}/>
-   <Product pd={productDetails5}/>
+   <Product pd={productDetails5}/>  */}
    
     </div>
 
