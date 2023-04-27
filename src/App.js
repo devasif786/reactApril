@@ -1,5 +1,6 @@
 import './App.css';
-import NameUpdater from './Component/NameUpdater';
+import LuckyNumber from './Component/LuckyNumber';
+
 
 function App() {
 
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-  <NameUpdater/>
+<LuckyNumber/>
     </div>
   );
 }
