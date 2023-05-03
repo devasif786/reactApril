@@ -3,9 +3,10 @@ import React,{useState} from 'react'
 export default function User() {
     const [people,setPeople]=useState([])
   const [index,setIndex]=useState(0)
+ 
 
-
-   async function getDog () {
+  async function getDog () {
+    
     if(index<6){
     setIndex(index+1)
     try{
@@ -26,15 +27,15 @@ export default function User() {
 }
   return (
     <div>
-        <button onClick={getDog}>click me</button>
- <div>
+        <button style={{backgroundColor:"red",marginLeft:"120px"}}onClick={getDog}>click me</button>
+ <div style={{marginTop:"20px"}} >
 
-    <div >
-    <img src={people.avatar} alt="image"/>
-    <p>{people.email}</p>
-    <h2>{people.first_name}</h2>
-    <h3>{people.last_name}</h3>
-    <p>{people.id}</p>
+    <div style={{backgroundColor:"blue"}} >
+    <img src={people.avatar} alt="image" style={{height:"300px"}}/>
+    <p style={{backgroundColor:"yellow",textAlign:"center"}}>{people.email}</p>
+    <h2 style={{backgroundColor:"yellow",textAlign:"center"}}>{people.first_name}</h2>
+    <h3 style={{backgroundColor:"yellow",textAlign:"center"}}>{people.last_name}</h3>
+    <p style={{backgroundColor:"yellow",textAlign:"center"}}>{people.id}</p>
     
     </div>
   
