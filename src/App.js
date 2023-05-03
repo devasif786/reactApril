@@ -10,8 +10,6 @@ const [data , setData]=useState([])
     console.log("hello")
     console.log(jason)
     setData(jason)
-
-   
     }
     data();
   },[])
