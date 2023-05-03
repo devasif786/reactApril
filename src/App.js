@@ -1,35 +1,49 @@
+import React,{useState,useEffect} from 'react'
 import './App.css';
-import { Button } from './components/button/button';
-import Card from './components/card/card';
+
 
 function App() {
 
-  //  components -/> small isolated piece of code of you complete ui .
-  // components  -/> functions (react function)
-  //  js function -/> takes datatype as input and return data types
-  // react function -/> takes props as input and return jsx / html likw components .
-  //  react functions startWith Capital letter only . 
+  const [people,setPeople]=useState([])
+  const [index,setIndex]=useState(0)
 
+ useEffect(()=>{
+   async function getDog () {
+       try{
+            const response = await fetch('https://reqres.in/api/users/')
+            const data = await response.json()
+            console.log(" data dot data hello12")
+            console.log(data.data)
+            setPeople(data.data)
+            console.log(" hello1")
+             console.log(people)
+}
+        catch(error){
+        console.log('i am from catch , ' ,error)
+}
+}
+getDog()
+},[index])
+const click=()=>{
+  setIndex(index+1)
+}
+   
 
-//   Jsx -/> javascript extension 
-//   it provides the power to write the html in js file 
-
-//  ui 
-//  functionality 
-//  data management 
-//  folder structure (Atomic folder structure)
-
-
-//  css  -> style to style the component
-//  js -/> code to ceate the component 
-
-
-
-  return (
-    <div className="App">
-      <h1>Welcome to react js  ....</h1>
-      <Button/>
-      <Card/>
+return (
+<div>
+  <button onClick={click}>click me</button>
+ <div>
+  {people.map(ele => (
+    <div>
+    <img src={ele.avatar} alt="image"/>
+    <p>{ele.email}</p>
+    </div>
+  ))}
+ </div>
+  
+   
+  
+     
     </div>
   );
 }
