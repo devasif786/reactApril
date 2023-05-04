@@ -1,61 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios';
 
 function App() {
-  const [mobile, setMobile] = useState('');
-  const [otpSent, setOtpSent] = useState(false);
-  const [error, setError] = useState(null);
+  const [mobile, setmobile] = useState('');
+  const [eerror, setEerror] = useState('');
 
-  const handleMobileChange = (event) => {
-    setMobile(event.target.value);
-  };
+  const handleSendOtp = () => {
+    const mobileRegex = /^[6-9]\d{9}$/;
 
-  const handleSendOtp = (event) => {
-    event.preventDefault();
-    if (/^[6-9]\d{9}$/.test(mobile)) {
-      fetch("https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ mobile: parseInt(mobile) }),
-      })
-        .then((response) => {
-          if (response.ok) {
-            setOtpSent(true);
-            setError(null);
-            setTimeout(() => {
-              setOtpSent(false);
-            }, 120000);
-          } else {
-            setError('Failed to send OTP. Please try again later.');
-          }
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-          setError('Failed to send OTP. Please check your network connection and try again.');
-        });
-    } else {
-      setError('Please enter a valid Indian mobile number.');
+    if (!mobileRegex.test(mobile)) {
+      setEerror('Please enter a valid 10-digit Indian mobile number.');
+      return;
     }
+
+    axios.post('https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP', {
+      mobile: Number(mobile)
+    })
+    .then(response => {
+      if (response.status === 200) {
+        setmobile('');
+        setEerror('');
+      } else {
+        setEerror('Failed to send OTP. Please try again later.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      setEerror('An error occurred. Please try again later.');
+    });
   };
 
   return (
-    <div className="App">
-      <form>
-        <label htmlFor="mobile">Mobile number:</label>
-        <input
-          type="tel"
-          id="mobile"
-          name="mobile"
-          pattern="[6-9]\d{9}"
-          value={mobile}
-          onChange={handleMobileChange}
-          required
-        />
-        <button type="submit" onClick={{handleSendOtp}}>Send OTP</button>
-      </form>
-      {otpSent && <p>OTP sent successfully. Please check your mobile.</p>}
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div>
+    <h1> Enter your mobile number:</h1>
+      <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        pattern="[6-9]{1}[0-9]{9}"
+        required
+        value={mobile}
+        onChange={event => setmobile(event.target.value)}
+      />
+      <button onClick={handleSendOtp}>Send OTP</button>
+      {eerror && <div className="error">{eerror}</div>}
     </div>
   );
 }
