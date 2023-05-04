@@ -1,15 +1,15 @@
 import React,{useState,useEffect} from "react";
-
+import axios from "axios";
 function App() {
 
 const [data , setData]=useState([])
   useEffect (()=>{
     async function data(){
-    const response= await fetch("https://dog.ceo/api/breeds/image/random")
-    const jason=await response.json()
+    const response= await axios.get("https://dog.ceo/api/breeds/image/random")
+    
     console.log("hello")
-    console.log(jason)
-    setData(jason)
+    console.log(response)
+    setData(response.data)
     }
     data();
   },[])
@@ -18,8 +18,8 @@ const [data , setData]=useState([])
 
 
   return (
-    <div className="App">
-<img src={data.message}/>
+    <div className="App" >
+<img height ="300px"width="300px"src={data.message}/>
   
     </div>
   );
