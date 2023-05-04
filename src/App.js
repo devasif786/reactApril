@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSendOtp}>
+      <form>
         <label htmlFor="mobile">Mobile number:</label>
         <input
           type="tel"
@@ -52,7 +52,7 @@ function App() {
           onChange={handleMobileChange}
           required
         />
-        <button type="submit">Send OTP</button>
+        <button type="submit" onClick={{handleSendOtp}}>Send OTP</button>
       </form>
       {otpSent && <p>OTP sent successfully. Please check your mobile.</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
