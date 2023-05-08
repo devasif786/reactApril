@@ -1,4 +1,6 @@
 import React from "react";
+import Headers from "./Component/Molicule/Headers";
+
 
 function App() {
 
@@ -9,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-<img src={data.message}/>
+  <Headers/>
+       
   
     </div>
   );
