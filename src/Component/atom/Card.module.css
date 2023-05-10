@@ -1,0 +1,32 @@
+.Card {
+    min-height: 200px;
+    min-width: 200px;
+    padding: 20px;
+    background-color: rgb(90, 135, 190);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 5px;
+  }
+  .img{
+   /* margin-left: 80px; */
+   width: 100%;
+    border-radius: 50%;
+  }
+  .id{
+    text-align: center;
+  }
+  .email{
+    color: blueviolet;
+    text-align: center;
+    text-decoration: dotted;
+  }
+  .email1{
+    color: rgb(218, 209, 225);
+    text-align: center;
+    font-size: x-large;
+  }
+  .email2{
+    color: rgb(92, 193, 21);
+    text-align: center;
+    font-size: x-large;
+  }
