@@ -33,11 +33,8 @@ export default function Header() {
             </ul>
             
         </nav>
-    
-        <FaBars className={style.bar}size={24} onClick={()=>setshow(!show)}></FaBars>
-   
         {
-            show?<nav  style={{backgroundColor:"red",display:"flex",flexDirection:"row",alignItems:"center",position:"absolute",marginTop:"200px",marginLeft:"80%"}}>
+            show?<nav className='style.nav2' style={{height:"100px",width:"60px",marginRight:"60px",zIndex:"20"}}>
                  <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
@@ -49,6 +46,10 @@ export default function Header() {
             
             </nav>:null
         }
+    
+        <FaBars className={style.bar}size={24} onClick={()=>setshow(!show)}></FaBars>
+   
+      
     </header>
    
       <div className={style.hero}>
