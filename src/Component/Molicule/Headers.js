@@ -1,6 +1,8 @@
 import React,{useState} from 'react'
 import style from './Header.module.css'
 import { FaBars } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
+
 
 
 
@@ -9,6 +11,25 @@ import { FaBars } from 'react-icons/fa';
 
 
 export default function Header() {
+    const navi=useNavigate();
+    function hlh(){
+        navi('/Home')
+    }
+    function hla(){
+        navi('/AboutUs')
+    }
+    function hlp(){
+        navi('/Project')
+    }
+    function hlv(){
+        navi('/Video')
+    }
+    function hlc(){
+        navi('/Contact')
+    }
+   function hlogin(){
+    navi('/Login')
+   }
     const [show, setshow] = useState(false);
 
    
@@ -24,24 +45,24 @@ export default function Header() {
     
         
             <ul className={style.ul1}>
-                <li className={style.li1}><a href="/Home" className={style.a1}>Home</a></li>
-                <li className={style.li1}><a href="#" className={style.a1}>About Us</a></li>
-                <li className={style.li1}><a href="#" className={style.a1}>Projects</a></li>
-                <li className={style.li1}><a href="#" className={style.a1}>Video</a></li>
-                <li className={style.li1}><a href="#" className={style.a1}>Contact</a></li>
-                <button>Login</button>
+                <li className={style.li1} onClick={hlh}>Home</li>
+                <li className={style.li1} onClick={hla}>About Us</li>
+                <li className={style.li1}  onClick={hlp}>Projects</li>
+                <li className={style.li1}  onClick={hlv}>Video</li>
+                <li className={style.li1}  onClick={hlc}>Contact</li>
+                <button  onClick={hlogin} >Login</button>
             </ul>
             
         </nav>
         {
             show?<nav className='style.nav2' style={{height:"100px",width:"60px",marginRight:"60px",zIndex:"20"}}>
                  <ul>
-                <li><a href="/Home">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Video</a></li>
-                <li><a href="#">Contact</a></li>
-                <button>Login</button>
+                <li onClick={hlh}>Home</li>
+                <li  onClick={hla}>About Us</li>
+                <li onClick={hlp}>Projects</li>
+                <li onClick={hlv}>Video</li>
+                <li onClick={hlc}>Contact</li>
+                <button   onClick={hlogin}>Login</button>
             </ul>
             
             </nav>:null

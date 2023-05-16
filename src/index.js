@@ -8,8 +8,12 @@ import Contact from './Component/Atom/Contact';
 import Home from './Component/Atom/Home';
 import Project from './Component/Atom/Project';
 import Video from './Component/Atom/Video';
+import Login from './Component/Atom/Login';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 const router1 =createBrowserRouter([
+  {path:"/Login",
+  element:<Login/>
+  },
   {
     path:"/",
     element:<App/>

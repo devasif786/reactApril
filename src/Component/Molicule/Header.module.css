@@ -37,7 +37,8 @@ header {
   }
   
   .li1 {
-    margin-right: 10px; /* Add spacing between the navigation links */
+    margin-right: 10px;
+   cursor: pointer;
   }
   
   .a1 {
