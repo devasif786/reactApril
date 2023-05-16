@@ -10,8 +10,8 @@ export default function Login() {
         navi('../')
     }
   return (
-    <div>Thanks for Login
-
+    <div style={{textAlign:"center"}}>Thanks for Login
+ 
         <button onClick={handleBack}> Bavk to Main page</button>
     </div>
   )
