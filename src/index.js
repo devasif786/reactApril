@@ -3,13 +3,44 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
+import Aboutus from './Component/Atom/Aboutus';
+import Contact from './Component/Atom/Contact';
+import Home from './Component/Atom/Home';
+import Project from './Component/Atom/Project';
+import Video from './Component/Atom/Video';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+const router1 =createBrowserRouter([
+  {
+    path:"/",
+    element:<App/>
+  },
+  {
+    path:"/Home",
+    element:<Home/>
+  },
+  {
+    path:"/AboutUs",
+    element:<Aboutus/>
+  },
+  {
+    path:"/Contact",
+    element:<Contact/>
+  },
+  {
+    path:"/Project",
+    element:<Project/>
+  },
+  {
+    path:"/Video",
+    element:<Video/>
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router1}/>
+   
   </React.StrictMode>
 );
 

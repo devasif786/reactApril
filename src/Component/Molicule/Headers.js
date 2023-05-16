@@ -24,7 +24,7 @@ export default function Header() {
     
         
             <ul className={style.ul1}>
-                <li className={style.li1}><a href="#" className={style.a1}>Home</a></li>
+                <li className={style.li1}><a href="/Home" className={style.a1}>Home</a></li>
                 <li className={style.li1}><a href="#" className={style.a1}>About Us</a></li>
                 <li className={style.li1}><a href="#" className={style.a1}>Projects</a></li>
                 <li className={style.li1}><a href="#" className={style.a1}>Video</a></li>
@@ -36,7 +36,7 @@ export default function Header() {
         {
             show?<nav className='style.nav2' style={{height:"100px",width:"60px",marginRight:"60px",zIndex:"20"}}>
                  <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/Home">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Video</a></li>
