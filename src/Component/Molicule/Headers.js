@@ -53,7 +53,7 @@ export default function Header() {
     </header>
    
       <div className={style.hero}>
-      <div >
+      <div className={style.text} >
       <h1>Welcome to Our Website</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           <button>Learn More</button>
@@ -61,8 +61,8 @@ export default function Header() {
          
        
       
-      <div className="hero-image">
-        <img src="https://rukminim1.flixcart.com/image/416/416/k7gikcw0/poster/4/h/h/large-varun-dhawan-room-wall-poster-bollywood-hero-poster-for-original-imafpzbgy8hbhc4t.jpeg?q=70" alt="Hero Image" />
+      <div className={style.imge}>
+        <img src="https://cdn.pixabay.com/photo/2018/04/10/22/18/spiderman-3309033_960_720.jpg"alt="Hero Image" />
       </div>
       </div>
     

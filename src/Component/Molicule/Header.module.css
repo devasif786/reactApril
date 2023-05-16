@@ -54,9 +54,28 @@ header {
   
 .hero{
     display: flex;
-   
+   width: 100%;
 
 }
+.text{
+  color:white;
+ 
+  text-align: center;
+  background-color: #151516;
+  width:50%
+  
+}
+.imge{
+  border: 2px solid black;
+  width: 50%;
+}
+.imge img{
+ background-color: #333;
+ width:50%
+}
+
+
+
 @media only screen and (min-width: 600px){
   .nav2{
     display: none;
@@ -82,6 +101,19 @@ header {
         display: flex;
         flex-direction: column-reverse;
     
+    }
+    .text{
+      color:white;
+     
+      text-align: center;
+      background-color: #151516;
+      width:100%
+      
+    }
+    .imge{
+      border: 2px solid rgb(251, 239, 239);
+      width: 100%;
+      height: auto;
     }
     .bar {
       display: block;
