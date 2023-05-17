@@ -19,7 +19,7 @@ setName(names.filter((na,i)=>i!=index))
     <div style={{textAlign:"center"}}>
 
         <input type="text" value={nameadd} onChange={(e)=>{setNameadd(e.target.value)}}/>
-        <button onClick={handleadd}>Add User</button>
+        <button onClick={handleadd}>+AddUser</button>
         <ul type="none">
           {names.map((nam,i)=>
           <li key={i}>{nam}
