@@ -8,28 +8,52 @@ export default function Quiz() {
     const[clickOption,setclickoption]=useState(0)
     const [show,setShow]=useState(false)
     const [btnSubmit,setbtnSubmit]=useState(true)
-    const [cong,setcong]=useState(0)
+    const [timer, setTimer] = useState(600);
+
+    useEffect(() => {
+        
+      const interval = setInterval(() => {
+        setTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            changeQuestion()
+        }, 60000)
+    
+        return () => clearInterval(interval)
+    },[currentQuestion] )
+   
+  
  
    function changeQuestion(){
+ 
+
     updateScore();
-    checkedScore();
+
     if(currentQuestion==QuizData.length-2){
         setbtnSubmit(false)
-    }
-   
-    
+    } 
     if(currentQuestion<QuizData.length-1){
     setcurrentQuestion(currentQuestion+1)
      setclickoption(0)
+    
+    
     }else{
        setShow(true)
+    
     }
 
    }
    function updateScore(){
        if(clickOption===QuizData[currentQuestion].answer){
         setScore(score+2)
-        setcong(cong+2)
+       
        }
     
    }
@@ -41,20 +65,16 @@ export default function Quiz() {
     setclickoption(0)
     setScore(0)
     setbtnSubmit(true)
+    setTimer(600)
    }
-   function checkedScore(){
-    if(currentQuestion==QuizData.length-1){
-        if(score>2){
-            alert(`congratulation you are win${cong}`)
-        }
-    }
-   }
+   
   return (
 
 
     <div>
 
-   <h1 className={style.heading}>QUIZ APP</h1>
+   <h1 className={style.heading}>QUIZ APP  <h1></h1></h1> 
+   
    <div className={style.container}>
     {show? (
         <Quizresult score={score} totalScore={QuizData.length*2} tryAgain={reset} count={currentQuestion}/>
@@ -69,11 +89,13 @@ export default function Quiz() {
             return (<button className={`option-btn ${clickOption==i+1?"checked":null}`}
                 key={i}
             onClick={()=>setclickoption(i+1)}
+            type='radio'
             >{options}</button>)
         })}
     </div>
     {btnSubmit?(<><input type="button" value="Next" onClick={changeQuestion} className={style.button}/></>):(<><button onClick={changeQuestion} className={style.button}>Submit</button></>)}
-        
+   <h1> Second: {timer} </h1> 
+
    </>)}
    </div>
 

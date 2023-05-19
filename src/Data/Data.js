@@ -19,4 +19,31 @@ export const QuizData = [
         options: ["1996", "1995", "1994", "none of the above"],
         answer:2
     },
+    {
+        question: "India got Independence in which year?",
+        options: ["1946", "1945", "1994", "none of the above"],
+        answer:4
+    },
+    {  question: "India gained Independence from which European nation?",
+        options: ["USA", "JAPAN", "BRAZIL", "ENGLAND"],
+        answer:4
+    },
+    {
+        question: "India got Independence in which year?",
+        options: ["1946", "1947", "1994", "none of the above"],
+        answer:2
+    },
+    {      question: "CHOOSE CORRECT ONE ?",
+    options: ["3+2=1", "5+3=2", "4+3=7", "9+4=10"],
+    answer:3
+},
+{  question: "CHOOSE CORRECT ONE ?",
+    options: ["VIRAL KHOLI: AUS", "VIRAL KHOLI: BAN","VIRAL KHOLI: ENGLAND", "VIRAL KHOLI: IND"],
+    answer:4
+},
+{
+    question:"CHOOSE CORRECT ONE ?",
+    options: ["MESSI : POR", "MESSI : ARG", "MESSI : USA", "MESSI : BRA"],
+    answer:2
+},
 ];
