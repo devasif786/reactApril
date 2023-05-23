@@ -55,9 +55,13 @@ h6{
    font-size: medium;
    margin: 0%;
    padding: 0%;
+   display: flex;
+   flex-direction: initial;
+   gap: 200px;
   }
   
  h6:hover {
+
     background-color: #bb8c8c;
     cursor: pointer;
   }
