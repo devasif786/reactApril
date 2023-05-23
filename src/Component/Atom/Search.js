@@ -23,6 +23,7 @@ export default function Search() {
     }
     function handleData(value1){
       setInput(value1)
+      setData([])
     }
   return (
     <>
