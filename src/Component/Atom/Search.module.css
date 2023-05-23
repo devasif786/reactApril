@@ -1,0 +1,63 @@
+.inputWrapper{
+    margin-top: 40px;
+    width: 1000px;
+    height: 2.5rem;
+    border: none;
+    border-radius: 30px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 8px 12px #de4646;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    
+    align-items: center;
+   
+}
+
+input{
+    background-color: transparent;
+    border: none;
+   
+    height: 100%;
+    font-size: 1.25rem;
+    width: 90%;
+   
+}
+input:focus{
+    outline: none;
+    border-bottom: 4px dotted rgb(3, 3, 3);
+}
+#searchIcon{
+    color: royalblue;
+    margin-right: 30px;
+    cursor: pointer;
+}
+#searchIcon1{
+    color: royalblue;
+    margin-left: 30px; 
+    cursor: pointer;
+}
+
+.Res{
+ 
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 8px #ffffff;
+        border-radius: 10px;
+        margin-top: 1rem;
+        max-height: 300px;
+        overflow-y: auto;
+      
+}
+h6{
+   text-align: center;
+   font-size: medium;
+   margin: 0%;
+   padding: 0%;
+  }
+  
+ h6:hover {
+    background-color: #bb8c8c;
+    cursor: pointer;
+  }
