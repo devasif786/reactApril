@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    width: 20vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 2px #e8cf0b;
+    font-size: larger;
+    background-color: rgb(241, 237, 22);
+    border-radius: 1.2rem;
+}
+
+.container img {
+    width: 15vw;
+    height: 35vh;
+}
+
+.container button {
+    width: 8rem;
+    height: 2.3rem;
+    color: yellow;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.container::after {
+    color: white;
+}

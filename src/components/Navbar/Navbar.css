@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    column-gap: 60vw;
+    font-weight: bolder;
+    height:9.5vh;
+    font-size:larger;
+    color:black;
+    box-shadow: 0 0 50px 2px yellow;
+    margin-bottom: 3rem;
+    background-color: yellow;
+}
+
+.links{
+    display: flex;
+    gap:10rem;
+}
+
+.logo{
+    margin-left: 4rem;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
