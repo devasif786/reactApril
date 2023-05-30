@@ -2,11 +2,11 @@ import {configureStore} from '@reduxjs/toolkit'
 import { HomeReducer } from '../components/HomeSlice'
 import { FavCards } from '../components/FavouriteSlice'
 
-const store = configureStore({
+const stores = configureStore({
     reducer:{
         home:HomeReducer,
         cards:FavCards
     }
 })
 
-export default store
+export default stores
